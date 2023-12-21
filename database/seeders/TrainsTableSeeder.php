@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use app\Models\Train;
+use App\Models\Train;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Faker\Generator as Faker;
@@ -30,7 +30,7 @@ class TrainsTableSeeder extends Seeder
             $newTrain->treno_in_orario = $faker->boolean();
             $newTrain->cancellato = $faker->text(20);
 
-
+            $newTrain->save();
         }
 
     }
